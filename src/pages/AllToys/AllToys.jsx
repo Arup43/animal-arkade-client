@@ -1,9 +1,10 @@
 import { Table } from "react-bootstrap";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
   const toys = useLoaderData();
-  console.log(toys);
+  useTitle("All Toys");
 
   return (
     <div className="container mb-5 pb-5">

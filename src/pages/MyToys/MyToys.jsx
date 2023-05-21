@@ -3,11 +3,13 @@ import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
   const [toys, setToys] = React.useState([]);
 
   const { user } = useContext(AuthContext);
+  useTitle("My Toys");
 
   const handleDelete = (id) => {
     Swal.fire({

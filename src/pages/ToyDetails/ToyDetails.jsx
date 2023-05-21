@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import "./ToyDetails.css";
+import useTitle from "../../hooks/useTitle";
 
 const ToyDetails = () => {
     const toy = useLoaderData();
     const {pictureUrl, name, price, rating, description, sellerName, sellerEmail, availableQuantity} = toy;
+    useTitle(name);
 
     return (
         <div className="text-center mt-5 pt-5">

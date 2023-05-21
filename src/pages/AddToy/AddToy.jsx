@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
+import useTitle from "../../hooks/useTitle";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
+  useTitle("Add A Toy");
 
   const handleAddToy = (event) => {
     event.preventDefault();

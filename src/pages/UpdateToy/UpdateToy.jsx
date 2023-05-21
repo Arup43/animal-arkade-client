@@ -1,6 +1,7 @@
 import { Button, Container, Form } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+import useTitle from "../../hooks/useTitle";
 
 const UpdateToy = () => {
   const {
@@ -15,6 +16,8 @@ const UpdateToy = () => {
     description,
     _id
   } = useLoaderData();
+
+  useTitle("Update Toy");
 
   const handleUpdateToy = (e) => {
     e.preventDefault();
