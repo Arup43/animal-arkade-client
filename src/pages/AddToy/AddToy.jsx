@@ -4,10 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 const AddToy = () => {
-
-    const { user } = useContext(AuthContext);
-
-
+  const { user } = useContext(AuthContext);
 
   const handleAddToy = (event) => {
     event.preventDefault();
@@ -24,33 +21,33 @@ const AddToy = () => {
     const description = form.description.value;
 
     const toy = {
-        name,
-        photoUrl,
-        sellerName,
-        sellerEmail,
-        subCategory,
-        price,
-        rating,
-        availableQuantity,
-        description
-    }
+      name,
+      photoUrl,
+      sellerName,
+      sellerEmail,
+      subCategory,
+      price,
+      rating,
+      availableQuantity,
+      description,
+    };
 
     fetch("http://localhost:5000/toys", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(toy)
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(toy),
     })
-    .then((response) => response.json())
-    .then((data) => {
-        if(data.insertedId) {
-            form.reset();
-            toast.success("Toy added successfully");
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.insertedId) {
+          form.reset();
+          toast.success("Toy added successfully");
         } else {
-            toast.error("Error adding toy");
+          toast.error("Error adding toy");
         }
-    });
+      });
   };
 
   return (
@@ -82,7 +79,7 @@ const AddToy = () => {
             name="sellerName"
             placeholder="Seller Name"
             required
-            defaultValue={user? user.displayName : ""}
+            defaultValue={user ? user.displayName : ""}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -92,7 +89,7 @@ const AddToy = () => {
             name="sellerEmail"
             placeholder="Seller Email"
             required
-            defaultValue={user? user.email : ""}
+            defaultValue={user ? user.email : ""}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -140,7 +137,7 @@ const AddToy = () => {
             required
           />
         </Form.Group>
-        
+
         <Button variant="success" type="submit">
           Add Toy
         </Button>
