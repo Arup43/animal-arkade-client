@@ -13,7 +13,7 @@ const ToyCard = ({ toy }) => {
         <p>Price: {price}</p>
         <p>Rating: {rating}</p>
         <Link to={`/toy-details/${toy._id}`}>
-          <Button variant="primary">View details</Button>
+          <Button variant="success">View details</Button>
         </Link>
       </Card.Body>
     </Card>

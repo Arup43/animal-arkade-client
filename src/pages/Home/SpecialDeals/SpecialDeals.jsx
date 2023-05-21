@@ -25,7 +25,7 @@ const SpecialDeals = () => {
             <Card.Text>
               5% off on all toys for kids under 5 years old!
             </Card.Text>
-            <Button variant="primary">Get the offer!</Button>
+            <Button variant="success">Get the offer!</Button>
           </Card.Body>
         </Card>
       </div>
@@ -43,7 +43,7 @@ const SpecialDeals = () => {
             <Card.Text>
               15% off on all toys till 15th August, 2023!
             </Card.Text>
-            <Button variant="primary">Get the offer!</Button>
+            <Button variant="success">Get the offer!</Button>
           </Card.Body>
         </Card>
       </div>
@@ -61,7 +61,7 @@ const SpecialDeals = () => {
             <Card.Text>
               5% off on all toys for kids under 5 years old!
             </Card.Text>
-            <Button variant="primary">Get the offer!</Button>
+            <Button variant="success">Get the offer!</Button>
           </Card.Body>
         </Card>
       </div>
@@ -79,7 +79,7 @@ const SpecialDeals = () => {
             <Card.Text>
               5% off on all toys for kids under 5 years old!
             </Card.Text>
-            <Button variant="primary">Get the offer!</Button>
+            <Button variant="success">Get the offer!</Button>
           </Card.Body>
         </Card>
       </div>
