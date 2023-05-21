@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDhqQiDPrRbC7ZoWhnAizQIFR-h8euJ6xA",
-    authDomain: "animal-arkade.firebaseapp.com",
-    projectId: "animal-arkade",
-    storageBucket: "animal-arkade.appspot.com",
-    messagingSenderId: "625528452303",
-    appId: "1:625528452303:web:e539eb10aa01ff27cf73ba"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase
