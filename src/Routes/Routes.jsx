@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/all-toys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/toys"),
+        loader: () => fetch("https://animal-arkade-server.vercel.app/toys"),
       },
       {
         path: "/my-toys",
@@ -53,7 +53,8 @@ const router = createBrowserRouter([
             <ToyDetails></ToyDetails>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://animal-arkade-server.vercel.app/toys/${params.id}`),
       },
       {
         path: "/add-toy",
@@ -70,7 +71,8 @@ const router = createBrowserRouter([
             <UpdateToy></UpdateToy>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://animal-arkade-server.vercel.app/toys/${params.id}`),
       },
     ],
   },

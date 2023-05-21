@@ -34,7 +34,7 @@ const AddToy = () => {
       description,
     };
 
-    fetch("http://localhost:5000/toys", {
+    fetch("https://animal-arkade-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

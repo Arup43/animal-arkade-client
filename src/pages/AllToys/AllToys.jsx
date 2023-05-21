@@ -12,12 +12,12 @@ const AllToys = () => {
     e.preventDefault();
     const form = e.target;
     const search = form.search.value;
-    fetch(`http://localhost:5000/search-toys/?q=${search}`)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            setShowedToys(data);
-        });
+    fetch(`https://animal-arkade-server.vercel.app/search-toys/?q=${search}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setShowedToys(data);
+      });
   };
 
   return (

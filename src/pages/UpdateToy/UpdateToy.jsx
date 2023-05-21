@@ -14,7 +14,7 @@ const UpdateToy = () => {
     rating,
     availableQuantity,
     description,
-    _id
+    _id,
   } = useLoaderData();
 
   useTitle("Update Toy");
@@ -45,7 +45,7 @@ const UpdateToy = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/toys/${_id}`, {
+    fetch(`https://animal-arkade-server.vercel.app/toys/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -54,10 +54,10 @@ const UpdateToy = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if(data.modifiedCount > 0) {
-            toast.success("Toy updated successfully");
+        if (data.modifiedCount > 0) {
+          toast.success("Toy updated successfully");
         } else {
-            toast.error("Not updated!");
+          toast.error("Not updated!");
         }
       });
   };

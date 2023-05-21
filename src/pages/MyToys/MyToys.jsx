@@ -27,7 +27,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${id}`, {
+        fetch(`https://animal-arkade-server.vercel.app/toys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -43,7 +43,9 @@ const MyToys = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?email=${user.email}&sort=${sort}`)
+    fetch(
+      `https://animal-arkade-server.vercel.app/toys?email=${user.email}&sort=${sort}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
@@ -57,8 +59,18 @@ const MyToys = () => {
       </h1>
       <div className="mb-5">
         <p>Sort your toys according to price: </p>
-        <button onClick={() => handleSort("ascending")} className="btn btn-success me-3">Ascending</button>
-        <button onClick={() => handleSort("descending")} className="btn btn-success">Descending</button>
+        <button
+          onClick={() => handleSort("ascending")}
+          className="btn btn-success me-3"
+        >
+          Ascending
+        </button>
+        <button
+          onClick={() => handleSort("descending")}
+          className="btn btn-success"
+        >
+          Descending
+        </button>
       </div>
 
       <Table striped bordered hover>
