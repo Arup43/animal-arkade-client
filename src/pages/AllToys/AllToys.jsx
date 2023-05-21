@@ -1,13 +1,41 @@
-import { Table } from "react-bootstrap";
+import { Button, Form, Table } from "react-bootstrap";
 import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
+import { useState } from "react";
 
 const AllToys = () => {
   const toys = useLoaderData();
+  const [showedToys, setShowedToys] = useState(toys);
   useTitle("All Toys");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const search = form.search.value;
+    fetch(`http://localhost:5000/search-toys/?q=${search}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            setShowedToys(data);
+        });
+  };
 
   return (
     <div className="container mb-5 pb-5">
+      <Form onSubmit={handleSearch}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Search by toy name: </Form.Label>
+          <Form.Control
+            type="text"
+            name="search"
+            placeholder="Toy Name"
+            required
+          />
+        </Form.Group>
+        <Button variant="success" type="submit">
+          search
+        </Button>
+      </Form>
       <h1 className="text-center mt-5 pt-5 mb-5">
         Here is the list of all toys!
       </h1>
@@ -23,7 +51,7 @@ const AllToys = () => {
           </tr>
         </thead>
         <tbody>
-          {toys.map((toy) => {
+          {showedToys.map((toy) => {
             return (
               <tr key={toy._id}>
                 <td>{toy.sellerName}</td>
