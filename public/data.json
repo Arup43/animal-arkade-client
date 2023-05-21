@@ -1,0 +1,68 @@
+[
+  {
+    "pictureUrl": "https://img.freepik.com/premium-photo/cute-teddy-bear-with-heart-love-valentine-s-day-card-3d-render-illustration_691560-7210.jpg?w=2000",
+    "name": "Teddy Bear 1",
+    "sellerName": "Emily's Toys",
+    "sellerEmail": "emily@example.com",
+    "subCategory": "Teddy Bear",
+    "price": 19.99,
+    "rating": 4.7,
+    "availableQuantity": 8,
+    "description": "Adorable teddy bear with a soft and huggable body. Perfect for kids and collectors alike."
+  },
+  {
+    "pictureUrl": "https://i.pinimg.com/236x/b3/fd/06/b3fd06bab4e0ae61659c4ef59e573229.jpg",
+    "name": "Teddy Bear 2",
+    "sellerName": "Toy Land",
+    "sellerEmail": "info@toyland.com",
+    "subCategory": "Teddy Bear",
+    "price": 14.99,
+    "rating": 4.4,
+    "availableQuantity": 5,
+    "description": "Cute and cuddly teddy bear with a charming smile. Makes a great gift for any occasion."
+  },
+  {
+    "pictureUrl": "https://m.media-amazon.com/images/I/61F3E5Ave8L.jpg",
+    "name": "Plush Horse 1",
+    "sellerName": "Gallop & Play",
+    "sellerEmail": "sales@gallopplay.com",
+    "subCategory": "Horse",
+    "price": 24.99,
+    "rating": 4.9,
+    "availableQuantity": 10,
+    "description": "Soft and realistic plush horse. Perfect for imaginative play and horse enthusiasts."
+  },
+  {
+    "pictureUrl": "https://m.media-amazon.com/images/I/61yISUmJzaL._AC_SL1280_.jpg",
+    "name": "Plush Horse 2",
+    "sellerName": "Hobby Stables",
+    "sellerEmail": "contact@hobbystables.com",
+    "subCategory": "Horse",
+    "price": 19.99,
+    "rating": 4.6,
+    "availableQuantity": 6,
+    "description": "Beautifully crafted plush horse with a flowing mane and tail. Ideal for horse lovers of all ages."
+  },
+  {
+    "pictureUrl": "https://i.bosity.com/product_img/267/61013573/61013573_2_image.jpg?x-oss-process=image/resize,p_100/watermark,image_d2F0ZXJtYXJrX2ltZy8xNzExMTQxNi9kZWZhdWx0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxQXzk5,g_nw,x_0,y_0",
+    "name": "Kitten Plush 1",
+    "sellerName": "Pawsome Pet Shop",
+    "sellerEmail": "info@pawsomepets.com",
+    "subCategory": "Cat",
+    "price": 12.99,
+    "rating": 4.3,
+    "availableQuantity": 12,
+    "description": "Adorable kitten plush toy with lifelike features. Provides comfort and companionship."
+  },
+  {
+    "pictureUrl": "https://i.bosity.com/product_img/269/61013575/61013575_1_image.jpg?x-oss-process=image/resize,p_100/watermark,image_d2F0ZXJtYXJrX2ltZy8xNzExMTQxNi9kZWZhdWx0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxQXzk5,g_nw,x_0,y_0",
+    "name": "Kitten Plush 2",
+    "sellerName": "Whiskers & Paws",
+    "sellerEmail": "sales@whiskerspaws.com",
+    "subCategory": "Cat",
+    "price": 9.99,
+    "rating": 4.1,
+    "availableQuantity": 7,
+    "description": "Super soft and cuddly kitten plush. Perfect for cat lovers of all ages."
+  }
+]
