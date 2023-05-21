@@ -3,7 +3,7 @@ import "./Testimonial.css";
 
 const Testimonial = () => {
   return (
-    <>
+    <div className="mb-5 pb-5">
       <h1 className="text-center mt-5 pt-5">Testimonial</h1>
       <p className="text-center mb-5">
         See what customers are saying about us!
@@ -65,7 +65,7 @@ const Testimonial = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,18 @@
+.footer h1,
+.footer p {
+    color: rgb(173, 173, 173);
+}
+
+.subscribe {
+    width: 240px;
+    height: 38px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.socials p:hover {
+    color: #53ab38;
+    cursor: pointer;
+}
