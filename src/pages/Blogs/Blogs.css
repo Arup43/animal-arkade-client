@@ -1,0 +1,20 @@
+.blogs {
+    background-color: rgba(244, 244, 244, 1);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.blog {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.blog p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    color: #757575;
+}
