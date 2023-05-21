@@ -1,0 +1,14 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust the number of columns as needed */
+    gap: 10px;
+    /* Adjust the gap between images as needed */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Adjust the image fit style as needed */
+}
