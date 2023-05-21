@@ -10,55 +10,72 @@ import MyToys from "../pages/MyToys/MyToys";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
 import AddToy from "../pages/AddToy/AddToy";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-            path: '/login',
-            element: <Login></Login>
-        },
-        {
-            path: '/register',
-            element: <Registration></Registration>
-        },
-        {
-            path: '/blogs',
-            element: <Blogs></Blogs>
-        },
-        {
-            path: '/all-toys',
-            element: <AllToys></AllToys>,
-            loader: () => fetch('http://localhost:5000/toys')
-        },
-        {
-            path: '/my-toys',
-            element: <MyToys></MyToys>
-        },
-        {
-            path: '/toy-details/:id',
-            element: <ToyDetails></ToyDetails>
-        },
-        {
-            path: '/add-toy',
-            element: <AddToy></AddToy>
-        },
-        {
-            path: '/update-toy/:id',
-            element: <UpdateToy></UpdateToy>
-        }
-    ]
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Registration></Registration>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/all-toys",
+        element: <AllToys></AllToys>,
+        loader: () => fetch("http://localhost:5000/toys"),
+      },
+      {
+        path: "/my-toys",
+        element: (
+          <PrivateRoute>
+            <MyToys></MyToys>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/toy-details/:id",
+        element: (
+          <PrivateRoute>
+            <ToyDetails></ToyDetails>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/add-toy",
+        element: (
+          <PrivateRoute>
+            <AddToy></AddToy>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update-toy/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateToy></UpdateToy>
+          </PrivateRoute>
+        ),
+      },
+    ],
   },
   {
     path: "*",
-    element: <NotFound></NotFound>
-  }
+    element: <NotFound></NotFound>,
+  },
 ]);
 
 export default router;
