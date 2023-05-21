@@ -1,8 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./Header.css";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        console.log("User Logged Out");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <div className="container my-5">
       <nav className="d-flex align-items-center justify-content-between">
@@ -30,22 +42,26 @@ const Header = () => {
             >
               All Toys
             </NavLink>
-            <NavLink
-              to="/my-toys"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              My Toys
-            </NavLink>
-            <NavLink
-              to="/add-toy"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Add A Toy
-            </NavLink>
+            {user && (
+              <>
+                <NavLink
+                  to="/my-toys"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                >
+                  My Toys
+                </NavLink>
+                <NavLink
+                  to="/add-toy"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                >
+                  Add A Toy
+                </NavLink>
+              </>
+            )}
             <NavLink
               to="/blogs"
               className={({ isActive, isPending }) =>
@@ -57,16 +73,24 @@ const Header = () => {
           </ul>
         </div>
         <div>
-          <div className="d-flex justify-content-center align-items-center right-side">
-            <div className="image-container" title="Arup">
-              <img className="img-fluid" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="User" />
+          {/* User profile picture */}
+          {user ? (
+            <div className="d-flex justify-content-center align-items-center right-side">
+              <div className="image-container" title={user.displayName}>
+                <img className="img-fluid" src={user.photoURL} alt="User" />
+              </div>
+              <button
+                onClick={handleLogout}
+                className="btn btn-danger logout-btn"
+              >
+                Logout
+              </button>
             </div>
-            <button
-              className="btn btn-success logout-btn"
-            >
-              Logout
-            </button>
-          </div>
+          ) : (
+            <Link to="/login">
+              <button className="btn btn-danger logout-btn ms-4">Login</button>
+            </Link>
+          )}
         </div>
       </nav>
     </div>
