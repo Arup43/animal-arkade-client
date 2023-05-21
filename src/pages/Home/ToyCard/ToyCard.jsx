@@ -12,7 +12,7 @@ const ToyCard = ({ toy }) => {
         <Card.Text>{description}</Card.Text>
         <p>Price: {price}</p>
         <p>Rating: {rating}</p>
-        <Link to={`/toy-details/${toy._id}`}>
+        <Link to={`/toy/${toy._id}`}>
           <Button variant="success">View details</Button>
         </Link>
       </Card.Body>
