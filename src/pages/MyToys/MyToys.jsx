@@ -7,9 +7,14 @@ import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
   const [toys, setToys] = React.useState([]);
+  const [sort, setSort] = React.useState("none");
 
   const { user } = useContext(AuthContext);
   useTitle("My Toys");
+
+  const handleSort = (sort) => {
+    setSort(sort);
+  };
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -38,20 +43,24 @@ const MyToys = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?email=${user.email}`)
+    fetch(`http://localhost:5000/toys?email=${user.email}&sort=${sort}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
       });
-  }, [user]);
-
-  console.log(toys);
+  }, [user, sort]);
 
   return (
     <div className="container mb-5 pb-5">
       <h1 className="text-center mt-5 pt-5 mb-5">
         Here is the list of all toys!
       </h1>
+      <div className="mb-5">
+        <p>Sort your toys according to price: </p>
+        <button onClick={() => handleSort("ascending")} className="btn btn-success me-3">Ascending</button>
+        <button onClick={() => handleSort("descending")} className="btn btn-success">Descending</button>
+      </div>
+
       <Table striped bordered hover>
         <thead>
           <tr>
