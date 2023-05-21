@@ -1,0 +1,12 @@
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 768px) {
+    .two {
+        flex-direction: row;
+    }
+    .four {
+        flex-direction: row;
+    }
+    .card {
+        width: 80%;
+    }
+}

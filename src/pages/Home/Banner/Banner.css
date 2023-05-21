@@ -53,3 +53,31 @@
     font-weight: 500;
     color: #6cd036;
 }
+
+/* media query for mobile devices */
+@media only screen and (max-width: 768px) {
+
+    .carousel-caption h3,
+    .carousel-caption p {
+        text-align: center;
+        width: 75%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+    }    
+    .explore {
+        text-align: center;
+        margin-right: 100px;
+    }
+}

@@ -2,6 +2,7 @@ import { Button, Card } from "react-bootstrap";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./SpecialDeals.css";
 
 const SpecialDeals = () => {
   useEffect(() => {
@@ -9,10 +10,10 @@ const SpecialDeals = () => {
   }, []);
 
   return (
-    <div className="ms-5 ps-5 me-5 pe-5">
+    <div className="ms-md-5 ps-md-5 me-md-5 pe-md-5">
         <h1 className="text-center mt-5 pt-5 mb-5">Our Special Deals</h1>
-      <div data-aos="flip-left" data-aos-duration="3000">
-        <Card style={{ width: "25rem" }}>
+      <div data-aos="flip-left" data-aos-duration="3000" className="mb-5">
+        <Card style={{ width: "25rem" }}>  
           <Card.Img
             variant="top"
             src="https://media.istockphoto.com/id/1192709510/photo/one-little-girl-playing-with-toy-animals-in-the-living-room.jpg?s=612x612&w=0&k=20&c=lBT68OGXpWH9vzfMsFvyG-p-AzVJRKAEXEXFHQFPmw8="
@@ -29,7 +30,7 @@ const SpecialDeals = () => {
           </Card.Body>
         </Card>
       </div>
-      <div data-aos="flip-left" data-aos-duration="3000" className="d-flex flex-row-reverse">
+      <div data-aos="flip-left" data-aos-duration="3000" className="d-md-flex flex-row-reverse two mb-5">
         <Card style={{ width: "25rem" }}>
           <Card.Img
             variant="top"
@@ -47,7 +48,7 @@ const SpecialDeals = () => {
           </Card.Body>
         </Card>
       </div>
-      <div data-aos="flip-left" data-aos-duration="3000">
+      <div data-aos="flip-left" data-aos-duration="3000" className="mb-5">
         <Card style={{ width: "25rem" }}>
           <Card.Img
             variant="top"
@@ -65,7 +66,7 @@ const SpecialDeals = () => {
           </Card.Body>
         </Card>
       </div>
-      <div data-aos="flip-left" data-aos-duration="3000" className="d-flex flex-row-reverse">
+      <div data-aos="flip-left" data-aos-duration="3000" className="d-md-flex flex-row-reverse four mb-5">
         <Card style={{ width: "25rem" }}>
           <Card.Img
             variant="top"

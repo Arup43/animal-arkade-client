@@ -12,3 +12,11 @@
     object-fit: cover;
     /* Adjust the image fit style as needed */
 }
+
+
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-dark text-light footer py-5">
       <div className="container py-5 d-flex justify-content-between footer-container">
-        <div className="d-flex align-items-center gap-5">
+        <div className="d-flex align-items-center gap-5 mb-5">
           <img src={logo} className="img-fluid" style={{ width: "120px" }} />
           <div>
             <h1>Animal Arkade!</h1>
@@ -13,14 +13,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="address">
+        <div className="address mb-5">
           <h1 className="mb-4">Address</h1>
           <p>1122 Banani, Dhaka-1200 </p>
           <p>Cheftable224@gmail.com</p>
           <p>Phone: +880-1870405760</p>
         </div>
 
-        <div>
+        <div className="mb-5">
           <h1 className="mb-4">Socials</h1>
           <div className="socials">
             <p>Facebook</p>
